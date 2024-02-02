@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/bloc/counter.bloc.dart';
 import 'package:flutter_app/pages/counter.page.dart';
 import 'package:flutter_app/pages/home.page.dart';
 import 'package:flutter_app/pages/product.page.dart';
 import 'package:flutter_app/pages/themes/themes.dart';
 import 'package:flutter_app/pages/widgets/product.details.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(FApp());
@@ -42,16 +44,24 @@ class FApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        initialRoute: "/home",
-        routes: {
-          "/test": (context) => TestPage(),
-          "/home": (context) => HomePage(),
-          "/products": (context) => ProductPage(),
-          "/counter": (context) => CounterPage(),
-          "/productDetails": (context) => ProductDetails(
-              productId: ModalRoute.of(context)!.settings.arguments.toString()),
-        },
-        theme: MyAppTheme.themes[0]);
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => CounterBloc(),
+        )
+      ],
+      child: MaterialApp(
+          initialRoute: "/home",
+          routes: {
+            "/test": (context) => TestPage(),
+            "/home": (context) => HomePage(),
+            "/products": (context) => ProductPage(),
+            "/counter": (context) => CounterPage(),
+            "/productDetails": (context) => ProductDetails(
+                productId:
+                    ModalRoute.of(context)!.settings.arguments.toString()),
+          },
+          theme: MyAppTheme.themes[0]),
+    );
   }
 }
