@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Computer",
+      "price": 6000,
+      "promotion": false,
+      "stars": 5,
+      "image": "images/1.jpg",
+      "description": "Powerful desktop computer with a high-performance processor, ample RAM, and large storage capacity. Equipped with a sleek design, vibrant display, and advanced graphics for seamless multimedia experiences. Ideal for gaming, content creation, and demanding tasks."
+    },
+    {
+      "id": 2,
+      "name": "Smart phone",
+      "price": 2000,
+      "promotion": true,
+      "stars": 4,
+      "image": "images/2.jpg",
+      "description": "Sleek smartphone featuring a powerful processor, expansive storage, and a vivid display. Packed with advanced camera capabilities, long-lasting battery life, and seamless connectivity options. Ideal for multitasking, capturing high-quality photos, and staying connected on the go."
+    },
+    {
+      "id": 3,
+      "name": "Printer",
+      "price": 1000,
+      "promotion": false,
+      "stars": 2,
+      "image": "images/3.jpg",
+      "description": "High-performance printer with fast printing capabilities, sharp resolution, and versatile connectivity options. Designed for efficient document handling, it offers user-friendly features, such as wireless printing and intuitive controls. Ideal for home offices or businesses requiring reliable and professional-quality printing."
+    },
+    {
+      "id": 4,
+      "name": "Computer",
+      "price": 1500,
+      "promotion": true,
+      "stars": 3,
+      "image": "images/4.jpg",
+      "description": "Portable laptop with a lightweight design, powerful processor, and long-lasting battery life. Features a vibrant display, ample storage, and convenient connectivity options. Perfect for on-the-go productivity, multitasking, and entertainment."
+    }
+  ]
+}
